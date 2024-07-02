@@ -338,3 +338,141 @@ document.querySelector('#calculateButton18').addEventListener('click', function 
 
 });
 
+
+
+
+//question-19
+document.querySelector('#calculateButton19').addEventListener('click', function () {
+    // const number = document.querySelector('#numberInput').value;
+
+    function getProduct(n) { 
+        let product = 1; 
+    
+        while (n != 0) { 
+            product *= n % 10; 
+            n = Math.floor(n / 10); 
+        } 
+    
+        console.log( product); // Return the product of the digits
+    } 
+    
+    getProduct(4513);
+
+
+});
+
+
+
+//question-20
+document.querySelector('#calculateButton20').addEventListener('click', function () {
+    // const number = document.querySelector('#numberInput').value;
+
+    function determineLifeStage(age) {
+        let lifeStage;
+    
+        if (age >= 0 && age <= 12) {
+            lifeStage = "child";
+        } else if (age >= 13 && age <= 19) {
+            lifeStage = "teenager";
+        } else if (age >= 20 && age <= 64) {
+            lifeStage = "adult";
+        } else if (age >= 65) {
+            lifeStage = "senior";
+        } else {
+            lifeStage = "invalid age";
+        }
+    
+        return lifeStage;
+    }
+    console.log(determineLifeStage(10));  // Output: child
+    console.log(determineLifeStage(16));  // Output: teenager
+    console.log(determineLifeStage(30));  // Output: adult
+    console.log(determineLifeStage(70));  // Output: senior
+    console.log(determineLifeStage(-5));  // Output: invalid age
+    
+
+
+});
+
+
+
+
+//question-21
+document.querySelector('#calculateButton21').addEventListener('click', function () {
+    // const number = document.querySelector('#numberInput').value;
+
+    function classifyTriangle(side1, side2, side3) {
+
+        if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1) {
+            if (side1 === side2 && side2 === side3) {
+                return "equilateral";
+            } else if (side1 === side2 || side1 === side3 || side2 === side3) {
+                return "isosceles";
+            } else {
+                return "scalene";
+            }
+        } else {
+            return "not a valid triangle";
+        }
+    }
+    
+    // Example usage
+    console.log(classifyTriangle(3, 3, 3));   // Output: equilateral
+    console.log(classifyTriangle(3, 3, 5));   // Output: isosceles
+    console.log(classifyTriangle(3, 4, 5));   // Output: scalene
+    console.log(classifyTriangle(1, 2, 3));   // Output: not a valid triangle
+    
+    
+
+
+});
+
+
+
+//question-22
+document.querySelector('#calculateButton22').addEventListener('click', function () {
+    // const number = document.querySelector('#numberInput').value;
+
+    function getDayType(day) {
+        day = day.toLowerCase();
+    
+        if (day === "saturday" || day === "sunday") {
+            return "weekend";
+        } else if (day === "monday" || day === "tuesday" || day === "wednesday" || day === "thursday" || day === "friday") {
+            return "weekday";
+        } else {
+            return "invalid day";
+        }
+    }
+    
+    console.log(getDayType("Monday"));    // Output: weekday
+    console.log(getDayType("saturday"));  // Output: weekend
+    console.log(getDayType("Friday"));    // Output: weekday
+    console.log(getDayType("sunday"));    // Output: weekend
+    console.log(getDayType("Funday"));    // Output: invalid day
+    
+
+});
+
+
+
+//question-23
+document.querySelector('#calculateButton23').addEventListener('click', function () {
+    // const number = document.querySelector('#numberInput').value;
+    function classifyTemperature(temp) {
+        if (temp <= 15) {
+            return "Cold";
+        } else if (temp > 15 && temp <= 25) {
+            return "Warm";
+        } else {
+            return "Hot";
+        }
+    }
+    
+    // Example usage
+    console.log(classifyTemperature(10));  // Output: Cold
+    console.log(classifyTemperature(20));  // Output: Warm
+    console.log(classifyTemperature(30));  // Output: Hot
+    
+
+});
